@@ -1,0 +1,20 @@
+spring:
+   application:
+      name: service-provider
+   datasource:
+      url: jdbc:mysql://127.0.0.1:3306/kz?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: Ee84336462!
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+  instance:
+    instance-id: service-provider-8001
+    prefer-ip-address: true
+
