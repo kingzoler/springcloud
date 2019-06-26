@@ -17,3 +17,10 @@ eureka:
   instance:
     instance-id: service-provider2-8011
     prefer-ip-address: true
+    
+hystrix:
+   command:
+      default:
+         execution:
+            thread:
+               timeoutInMilliseconds: 5000

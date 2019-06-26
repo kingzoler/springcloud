@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient(name = "service-provider", contextId = "h1")
-public interface HelloWorld {
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test(@RequestParam("id") String id);
+@FeignClient(name = "service-provider", contextId = "h2")
+public interface HelloWorld2 {
+	@RequestMapping(value = "/test2", method = RequestMethod.GET)
+	public String test2(@RequestParam("id") String id);
 }

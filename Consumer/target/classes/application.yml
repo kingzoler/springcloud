@@ -11,5 +11,15 @@ eureka:
           defaultZone: http://localhost:8000/eureka/
 
 ribbon:
-  eureka:
-    enable: true
+   eureka:
+      enable: true
+   eager-load:
+      enabled: true
+      clients: service-provider
+    
+hystrix:
+   command:
+      default:
+         execution:
+            thread:
+               timeoutInMilliseconds: 5000

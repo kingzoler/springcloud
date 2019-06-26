@@ -18,3 +18,16 @@ eureka:
     instance-id: service-provider-8001
     prefer-ip-address: true
 
+
+ribbon:
+   eager-load:
+      enabled: true
+      clients: service-provider2
+
+
+hystrix:
+   command:
+      default:
+         execution:
+            thread:
+               timeoutInMilliseconds: 5000

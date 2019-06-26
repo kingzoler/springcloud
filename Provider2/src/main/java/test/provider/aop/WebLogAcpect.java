@@ -20,7 +20,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE + 2)
 public class WebLogAcpect {
-	@Pointcut("execution(public * test.consumer.controller..*.*(..))")
+	@Pointcut("execution(public * test.provider.controller..*.*(..))")
 	public void webLog() {
 	}
 
