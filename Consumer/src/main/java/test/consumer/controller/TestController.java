@@ -27,6 +27,8 @@ public class TestController {
 		
 		helloWorld2.test2("1");
 		
+		helloWorld2.test3("555");
+		
 		return helloWorld.test("123");
 	}
 }

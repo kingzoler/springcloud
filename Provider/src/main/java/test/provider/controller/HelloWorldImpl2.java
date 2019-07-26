@@ -20,4 +20,10 @@ public class HelloWorldImpl2 implements HelloWorld2 {
 		log.info("dd");
 		return null;
 	}
+
+	@Override
+	public String test3(String id) {
+		log.info("path参数：{}", id);
+		return null;
+	}
 }
