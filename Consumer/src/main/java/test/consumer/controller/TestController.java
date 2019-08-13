@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 import test.scin.HelloWorld;
 import test.scin.HelloWorld2;
+import test.scin.bean.TestBean;
 
 @RestController
 @Slf4j
@@ -28,6 +29,10 @@ public class TestController {
 		helloWorld2.test2("1");
 		
 		helloWorld2.test3("555");
+		
+		TestBean bean = new TestBean();
+		bean.setId("11");
+		helloWorld.test2(bean);
 		
 		return helloWorld.test("123");
 	}
