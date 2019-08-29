@@ -74,5 +74,11 @@
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>5.1.4.RELEASE</version>
 		</dependency>
+		
+		<dependency>
+		    <groupId>io.github.openfeign</groupId>
+		    <artifactId>feign-okhttp</artifactId>
+		    <version>10.3.0</version>
+		</dependency>
     </dependencies>
 </project>

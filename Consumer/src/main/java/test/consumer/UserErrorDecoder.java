@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 import org.apache.commons.codec.binary.Base64;
+import org.springframework.context.annotation.Primary;
 
 import feign.Response;
 import feign.Util;

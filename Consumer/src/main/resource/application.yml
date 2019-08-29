@@ -10,6 +10,12 @@ eureka:
     serviceUrl:
           defaultZone: http://localhost:8000/eureka/
 
+feign: 
+  httpclient:
+    enable: false
+  okhttp:
+    enable: true
+
 ribbon:
    eureka:
       enable: true
