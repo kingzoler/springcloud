@@ -21,7 +21,18 @@ ribbon:
       enable: true
    eager-load:
       enabled: true
-      clients: service-provider
+      clients: service-provider,service-provider2
+   ConnectTimeout: 250
+   ReadTimeout: 5000
+
+#更改负载策略，本地优先
+service-provider:
+   ribbon:
+      NFLoadBalancerRuleClassName: test.consumer.MyLocalPriorityRule
+service-provider2:
+   ribbon:
+      NFLoadBalancerRuleClassName: test.consumer.MyLocalPriorityRule
+serverIP: 192.168.2.126
     
 hystrix:
    command:
