@@ -27,4 +27,14 @@ public class TestHelloImpl implements TestHello {
 		test2Mapper.insertTest2(RandomStringUtils.randomAlphabetic(10));
 		return "Test" + id.toString();
 	}
+
+	@Override
+	public String test2() {
+		try {
+			Thread.sleep(2000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return "123";
+	}
 }

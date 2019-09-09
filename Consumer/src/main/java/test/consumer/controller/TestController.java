@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 import test.scin.HelloWorld;
 import test.scin.HelloWorld2;
+import test.scin.TestHello;
 import test.scin.bean.TestBean;
 
 @RestController
@@ -19,10 +20,12 @@ public class TestController {
 	private Test2Controller test2Controller;
 	@Autowired
 	private HelloWorld2 helloWorld2;
+	@Autowired
+	private TestHello testHello;
 	
 	@GetMapping("/test")
 	public String test(String t) {
-		log.info(helloWorld.toString());
+		log.info(helloWorld2.toString());
 		
 		test2Controller.test2();
 		
@@ -33,6 +36,8 @@ public class TestController {
 		TestBean bean = new TestBean();
 		bean.setId("11");
 		helloWorld.test2(bean);
+		
+		testHello.test2();
 		
 		return helloWorld.test("123");
 	}
