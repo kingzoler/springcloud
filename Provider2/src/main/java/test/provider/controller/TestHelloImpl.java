@@ -30,11 +30,6 @@ public class TestHelloImpl implements TestHello {
 
 	@Override
 	public String test2() {
-		try {
-			Thread.sleep(2000L);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		return "123";
 	}
 }

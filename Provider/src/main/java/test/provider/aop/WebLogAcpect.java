@@ -46,6 +46,7 @@ public class WebLogAcpect {
 		String name = joinPoint.getSignature().toLongString();
 		if (name.equals(MyThreadLocal.AOP_POINT.get())) {
 			MDC.remove("uuid");
+			MyThreadLocal.AOP_POINT.remove();
 		}
 	}
 }

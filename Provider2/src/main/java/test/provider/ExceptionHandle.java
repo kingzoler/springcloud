@@ -19,6 +19,7 @@ public class ExceptionHandle {
 	@ResponseBody
 	public String handle(Exception e) {
 		try {
+			e.printStackTrace();
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(baos);
 			oos.writeObject(e);
